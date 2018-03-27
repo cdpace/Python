@@ -60,7 +60,7 @@ def setValueAndCheckWin(player, val):
     for i in range(0,3):
         if grid[i].count(playerSymbol) == 3:
             return True
-    
+
     
 
     return False
