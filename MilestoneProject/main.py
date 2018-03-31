@@ -1,6 +1,13 @@
 import card_pack
+import game_service
+import player
 
-pack = card_pack.CardPack()
+client = player.Player('test',100)
+
+service = game_service.GameService(client)
+
+service.start()
+
 
 
 

@@ -8,7 +8,7 @@ class CardPack:
     def __init__(self):
         self.init_cards()
     
-    def create_suite(self,suite):
+    def __create_suite(self,suite):
         _suite = []
 
         _suite.append(card.Card("King",suite,10))
@@ -30,10 +30,10 @@ class CardPack:
     def init_cards(self):
         self.__cards.clear()
 
-        self.__cards.extend(self.create_suite("Spades"))
-        self.__cards.extend(self.create_suite("Hears"))
-        self.__cards.extend(self.create_suite("Diamonds"))
-        self.__cards.extend(self.create_suite("Clubs"))
+        self.__cards.extend(self.__create_suite("Spades"))
+        self.__cards.extend(self.__create_suite("Hears"))
+        self.__cards.extend(self.__create_suite("Diamonds"))
+        self.__cards.extend(self.__create_suite("Clubs"))
 
     def reset_pack(self):
         self.init_cards()
