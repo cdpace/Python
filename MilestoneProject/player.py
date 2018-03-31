@@ -1,13 +1,13 @@
 class Player:
     
     #Attributes
-    __name = ""
+    name = ""
 
     #private attributes
     __balance = 0
 
     def __init__(self, name, balance):
-        self.__name = name
+        self.name = name
         self.__balance = balance
     
 

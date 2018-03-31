@@ -41,11 +41,14 @@ class CardPack:
     def get_all_cards(self):
         return self.__cards.copy()
     
-    def take_card(self):
-        if len(self.__cards) > 0:
-            card_position = random.randrange(0,len(self.__cards))
-            card = self.__cards[card_position]
-            del self.__cards[card_position]
-            return card
-        else:
-            return None
+    def take_cards(self, num = 1):
+        cards = []
+        for _ in range(0,num):
+            if len(self.__cards) > 0:
+                card_position = random.randrange(0,len(self.__cards))
+                card = self.__cards[card_position]
+                del self.__cards[card_position]
+                cards.append(card)
+        
+        return cards
+    
